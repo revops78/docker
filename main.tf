@@ -10,7 +10,7 @@ resource "aws_instance" "docker" {
   }
     user_data = file("docker.sh")
   tags = {
-    Name = "${project}-${environment}-docker"
+    Name = "${var.project}-${var.environment}-docker"
   }
 
 
